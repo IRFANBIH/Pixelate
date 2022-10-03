@@ -1,5 +1,5 @@
 // Your code here
-const table = document.getElementById("graph")
+const table = document.getElementsByTagName('table')[0]
 function makeRow(){
    let row = document.createElement("tr")
    for (let i = 0; i < 20; i++){
@@ -9,5 +9,6 @@ function makeRow(){
    table.appendChild(row)
 }
 
-makeRow()
-makeRow()
+let addRow = document.getElementById('add-row')
+
+addRow.addEventListener('click',makeRow)
