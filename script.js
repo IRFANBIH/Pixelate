@@ -8,6 +8,7 @@ function makeRow(){
    }
    table.appendChild(row)
 }
+console.log(table)
 
 let addRow = document.getElementById('add-row')
 
