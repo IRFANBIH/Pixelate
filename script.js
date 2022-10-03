@@ -1,5 +1,9 @@
 // Your code here
 const table = document.getElementsByTagName('table')[0]
+
+let chosenColor = 'blue'
+
+
 function makeRow(){
    let row = document.createElement("tr")
    for (let i = 0; i < 20; i++){
@@ -21,6 +25,15 @@ function colorize(event) {
    if (target.className.length) {
       target.className = ''
    } else {
-      target.className = 'red'
+      target.className = chosenColor
    }
+
+
 }
+
+let colors = document.getElementsByTagName('select') [0]
+
+colors.addEventListener('change', function(choose){
+    chosenColor= choose.target.value
+
+})
